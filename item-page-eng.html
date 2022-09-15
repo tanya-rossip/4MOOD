@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile print handbag </title>
+    <link rel="stylesheet" href="item-style.css">
+</head>
+<body>
+     <!-- items with absolute position for responsive -->
+     <div id="back-marq">
+        <p id="marquee">Working model prototype of product page</p>
+      </div>
+      <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll" onclick="chosePhotoOne()">
+      <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll-left">
+    <!-- header -->
+    <header>
+        <img src="images/arrow/iPhone11Pro/menu/hamburger.png" alt="hamburger" id="hamburger" onclick="hamburgerFunc()">
+        <img src="images/coolicon.png" alt="" id="hamburger-close" onclick="closeHamburger()">
+        <!-- navigation -->
+        <nav>
+       <!-- logo -->
+       <img src="images/4MOOD.png" alt="4MOOD" id="logo" onclick="window.location='mainpage-eng.html';">
+      
+       <ul id="navigation">
+           <li><a href="mainpage-eng.html#sale" style="color:#D0191D;">Sale</a></li>
+           <li><a href="new-eng.html">New arrivals</a></li>
+           <li id="accessories"><a href="all-items-eng.html">Clothing and accessories </a></li>
+           <li id="login-responsive" onclick="loginResponsive()">Account</li>
+           <li > 
+            <ul id="responsive-accesories">
+                <li>Clothing and accessories:</li>
+                <li><a href="shirts-eng.html">Tops</a></li>
+                <li><a href="bags-eng.html">Bags</a></li>
+                <li><a href="jewelry-eng.html">Jewelry</a></li>
+                <li><a href="skirts-eng.html">Skirts</a></li>
+                <li><a href="belts-eng.html">Belts</a></li>
+                <li><a href="scarf-eng.html">Winter clothing</a></li>
+                <li><a href="dresses-eng.html">Dresses</a></li>
+                <li><a href="shoes-eng.html">Shoes</a></li>
+                <li><a href="all-items-eng.html">See all</a></li>
+            </ul>
+            </li>
+       </ul>
+       </nav>
+       <div id="dropdown-triangle"></div>
+       <div class="grid" id="dropdown"> 
+           <div style="background-image: url(images/4245398746_2_6_8.jpeg); background-size:70%"  onclick="window.location='shirts-eng.html';">Tops</div>
+           <div style="background-image: url(images/dropdown/bags.jpg); background-size: cover; background-repeat: no-repeat;" onclick="window.location='bags-eng.html';"> Bags</div>
+           <div style="background-image: url(images/dropdown/jewerly.jpg);" onclick="window.location='jewelry-eng.html';">Jewelry</div>
+           <div style="background-image: url(images/4399317716_2_6_8.jpeg);" onclick="window.location='skirts-eng.html';">Skirts</div>
+           <div style="background-image: url(images/dropdown/belts.jpg);" onclick="window.location='belts-eng.html';">Belts</div>  
+           <div style="background-image: url(images/dropdown/scarfs.jpg); background-size: 70%;" onclick="window.location='scarf-eng.html';">Winter clothing</div>
+           <div style="background-image: url(images/4390361806_2_6_8-removebg.png); background-size: 70%;" onclick="window.location='dresses-eng.html';">Dresses</div>
+           <div style="background-image: url(images/dropdown/shoes.jpg);  background-size: contain;" onclick="window.location='shoes-eng.html';">Shoes</div>
+           <div style="background-image: url(images/dropdown/all.jpg);" onclick="window.location='all-items-eng.html';">See all
+           </div>
+       </div>
+       <!-- search -->
+       <section id="search-section">
+           <form style="display:flex;" onsubmit="window.location='final-eng.html'; return false">
+               <img src="images/iconmonstr-search-thin.svg" alt="search" id="search-icon">
+               <input type="text" name="search" id="search" placeholder="Search" onsubmit="window.location='final-eng.html';">
+           </form>
+           
+           <!-- profile -->
+           <ul id="profile-section">
+               <li id="login-preview">Account</li>
+               <li id="basket">Shopping bag</li>
+               <li class="quantity" id="quantity">1</li>
+           </ul>
+           </section>
+   </header>
+   <!-- pop up create account -->
+   <form id="pop-up-create" onsubmit="popFuncSubmitEng(); return false">
+    <section id="first-pop-create">
+        <label for="email-pop-create" id="heading-pop-create">Create an account</label>
+        <img src="images/coolicon.png" alt="" id="close-pop-create" class="close">
+    </section>
+    <section id="second-pop-create">
+        <input type="name" name="pop-up-name-create" id="name-pop-create" required placeholder="First Name">
+        <input type="name" name="pop-up-name-create" id="surname-pop-create" required placeholder="Last Name">
+        <input type="number" name="tel" id="tel-pop-create" placeholder="Phone number" required>
+        <input type="email" name="email" id="email-pop-create" placeholder="Email" required>
+        <input type="submit" name="login-submit-create" id="pop-submit-create" value="Sign up">
+    </section>
+    <section id="done-create">
+    <p id="confirm-done-create"></p></section>
+    </form>
+    <!-- pop up email -->
+    <form id="pop-up" onsubmit="popFuncEng(); return false">
+    <section id="first-pop">
+        <label for="email-pop" id="heading-pop">Enter your email  below. We'll send you a link to reset your password.            
+        </label>
+        <img src="images/coolicon.png" alt="" id="close-pop" class="close">
+    </section>
+    <section id="second-pop">
+        <input type="email" name="email" id="email-pop" placeholder="Email" required>
+        <input type="submit" name="login-submit" id="pop-submit" value="Reset password">
+    </section>
+    <section id="done">
+    <p id="confirm-done"></p></section>
+    </form>
+   <!-- Login  -->
+   <form onsubmit="window.location='final-eng.html'; return false" id="login-page">
+    <section id="login-heading">
+        <h5>Sign in <span style="visibility:hidden;">Увійдіть профіль</span></h5> 
+        <img src="images/coolicon.png" alt="" id="close-login" class="close">
+    </section>
+        <input type="email" name="email" id="login-email" placeholder="Email" required>
+        <input type="password" name="password" id="login-password" placeholder="Password" required>
+        <fieldset id="fieldset">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">remember me</label>
+        </fieldset>
+        <input type="submit" name="login-submit" id="login-submit" value="Login">
+        <p onclick="emailRemind()">Forgot password</p>
+        <input type="button" name="login-submit" id="login-create" value="Create an account" onclick="popFuncCreate()">
+    </form>
+   <!-- Basket -->
+   <div id="basket-preview">
+        <section class="items">
+            <div id="hbasket">
+                <h5 id="basket-heading"> Shopping bag (<span id="count">1</span>)</h5> 
+                <img src="images/coolicon.png" alt="" id="close" class="close">
+            </div>
+            <div id="first-item"> 
+                <section class="item">
+                    <img src="images/coolicon.png" alt="" class="close" id="close-first">
+                    <img src="images/minimalism-UhIttUPXxeU-unsplash.jpg" alt="item-photo" class="item-photo"> 
+                    <section class="items-quantity-basket">  
+                        <span>Gift for the first purchase</span>
+                    </section>
+                </section>
+            <p>For free</p>
+            </div>
+            <div id="second-item">
+                <section class="item" >
+                    <img src="images/coolicon.png" alt="" class="close" id="close-second">
+                    <img src="images/bags/3.jpg" alt="item-photo" class="item-photo"> 
+                    <section class="items-quantity-basket" >    
+                        <span>Crocodile print handbag</span>
+                        <section class="adding">
+                            <img src="images/minus.png" alt="minus" class="signs" id="minus-second"  onclick="secondSubtract()">
+                            <span id="quantity-second-item">1</span>
+                            <img src="images/plus.png" alt="plus" class="signs" id="plus-first"  onclick="secondAdding()">
+                        </section>           
+                    </section>
+                </section>
+                <p><span id="item-price">28</span> USD</p>
+            </div>
+            <div class="delivery ">
+                <p class="hdelivery">Shipping</p>
+                <p><span id="delivery-price">2</span> USD</p>
+            </div>
+            <div class="delivery hdelivery">
+        <p>Total:</p>
+        <p><span id="total-amount"></span> USD</p>
+            </div >
+            <div class="delivery responsive-delivery">
+                <p style="color: #555555">Refund or exchange within 30 days<br>
+                    Free shipping on orders $30+ </p>
+                <button id="order" onclick="window.location='final-eng.html'">Proceed to checkout</button>
+         </div>
+         </section>
+    </div>
+    <!-- main part -->
+ 
+    <main>
+        <div id="item-part">
+          <div id="other-photos">
+              <img src="images/bags/3.jpg" alt="" onclick="chosePhotoOne()" id="photo-one">
+              <img src="bag3/testforbasket.jpg" alt="" onclick="chosePhotoTwo()" id="photo-two">
+              <img src="bag3/39086636d02138df800c2832b8480c44.jpg" alt="" onclick="chosePhotoThree()" id="photo-three">
+              <img src="bag3/3f79615f34ff9654d982821d3be17016.jpg" alt="" onclick="chosePhotoFour()" id="photo-four">
+          </div>
+          <div id="item3-main-photo">
+          </div>
+          <div id="description-of-a-item">
+              <h5>Crocodile print handbag</h5> 
+              <p> <span class="old-price">56 USD</span> <span class="new-price">28 USD</span> <span class="discount">-50%</span></p>
+             
+              <form id="form-item" onsubmit="testFunc();return false;">
+              <fieldset>
+                  <legend>Color:</legend>
+                  <input type="radio" id="color-one"
+                  name="color" value="email" required>
+                 <input type="radio" id="color-two"
+                  name="color" value="phone">
+                 <input type="radio" id="color-three"
+                  name="color" value="mail">
+              </fieldset>
+                 <fieldset>
+                  <legend>Size:</legend>
+                  <select name="size" id="select-color">
+                      <option value="">XS</option>
+                      <option value="">S</option>
+                      <option value="">M</option>
+                      <option value="">L</option>
+                  </select>
+                 </fieldset>
+                  <input type="submit" id="order-button" value="Add to shopping bag" name="myButton">
+              </form>
+              <div id="description">
+                  <h6 id="choose-heading" class="hchoose">DESCRIPTION</h6>
+                  <h6 id="choose-heading-two">Care</h6>
+                  <h6 id="choose-heading-three">Shipping & return </h6>
+              </div>
+                  <p id="first-heading-description">
+                    The crocodile print handbag from 4MOOD would easily make your everyday accessory. Cut from <span>ECO AWARE</span>  polyster,  features long adjustable strap, decorative chains, inner zipped pocket, zip fastening, and inner lining.
+                    <span>ECO AWARE</span> recycled polyester  — is a <span>synthetic</span>  fiber that is produced from PET plastic sheets and/or recycled materials in a process that breaks down water and energy consumption. Fabrics made from recycled polyester are <span>long-lasting</span>, <span>quick-drying</span>  and <span>stretch resistant.</span> 
+                  </p>
+                  <p id="second-heading-description">
+                    <span>ECO AWARE</span> can be washed in a machine in a delicate mode, in warm water not exceeding 30 degrees. <br>
+                    The washing powder must be free of abrasive particles that can damage the product's surface. Liquid washing products are best suited. The use of bleach is also not recommended.
+                  </p>
+                    
+                  <p id="third-heading-description">
+                      <span>Free shipping</span> on orders over <span>30 USD</span>. <br> 
+                        Return item within  <span>30 days</span>  of the order shipment date 
+ 
+                       <a href="return-eng.html" style="color: black;">Return policy</a>
+                  </p>
+          </div>
+          
+             
+        </div>
+        <h5 style="margin: 5vw 0 0 0;">YOU MIGHT ALSO LIKE
+
+        </h5>
+      <div class="clothing" id="recomendations">
+          <div class="center" id="recomend">
+              <figure onclick="window.location='item-page-eng.html';">
+                  <img src="images/bags/6.jpg" alt="" >
+                  <figcaption>Backpack with pocket detail <br>
+                  <span class="price">16</span> <span> USD</span></figcaption>        
+              </figure>
+              <figure onclick="window.location='item-page-eng.html';">
+                  <img src="images/bags/8.jpg" alt="" >
+                  <figcaption>Urban backpack <br>
+                  <span class="price">21</span> <span> USD</span></figcaption>       
+              </figure>
+      </div>
+      <div class="right">
+          <figure onclick="window.location='item-page-eng.html';">
+              <img src="images/bags/4.jpg" alt="" >
+              <figcaption>City shoulder bag<br>
+              <span class="price">21</span> <span> USD</span></figcaption>       
+          </figure>
+          <figure onclick="window.location='item-page-eng.html';">
+              <img src="images/bags/11.jpg" alt="" >
+              <figcaption>Urban crossbody bag <br>
+              <span class="price">24</span> <span> USD</span></figcaption>        
+          </figure>
+      </div>
+      
+      </div>
+      <!-- arrow for responsive -->
+      <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll-up" >  
+      </main>
+       
+    <!-- footer  -->
+    <footer>
+        <div id="logo-and-lang">
+            <a href="#" id="logo-white"><img src="images/4MOODwhite.svg" alt="logo" onclick="window.location='mainpage-eng.html';"></a>
+            <ul id="language">
+            <li><a href="item-page.html">Українська</a> </li>
+            <li>|</li>
+            <li>English</li>
+            </ul> 
+              <p id="copyright">&#169; All rights reserved</p> 
+        </div>
+        <!-- info -->
+        <div class="info">
+            <ul>
+                <li><h4>Information</h4></li>
+                <li><a href="about-us-eng.html">About 4MOOD </a></li>
+                <li><a href="#login-preview"  onclick="loginOpenFunc()">Account</a></li>
+                <li><a href="payment-eng.html">Shipping info</a></li>
+                <li><a href="return-eng.html">Returns</a></li>
+                <li><a href="faq-eng.html">FAQ</a></li>
+            </ul> 
+        </div>
+        <!-- contacts -->
+        <div class="contacts">
+            <ul>
+                <li><h4>Contact us</h4></li>
+                <li><a href="tel:0441234567">044 123 45 67</a></li>
+                <li>Monday - Saturday: <br> 9:00 am - 6:00 pm</li>
+                <li><a href="mailto:4mood@gmail.com">4mood@gmail.com</a></li>
+                <li>Sportyvna Square, 1a, Kyiv, 01023 </li>
+                <li><a href="https://goo.gl/maps/KU33nYGpVYaoT4Zv7" style="text-decoration:underline">Store location on the map</a></li>
+            </ul>
+        </div>
+        <!-- social-->
+        <div class="follow">
+            <ul>
+                <li><h4>Follow us</h4></li>
+                <li id="logos">
+                    <img src="images/facebook.svg" alt="facebook" onclick="window.location='https://www.facebook.com/'">
+                    <img src="images/instagram.svg" alt="instagram" onclick="window.location='https://instagram.com'">
+                    <img src="images/youtube.svg" alt="youtube" onclick="window.location='https://youtube.com'">
+                    <img src="images/twitter.svg" alt="twitter" onclick="window.location='https://twitter.com'">
+                   
+                </li>
+            </ul>
+           
+        </div>
+    </footer>
+    <script src="item-page-eng.js"></script>
+</body>
+</html>

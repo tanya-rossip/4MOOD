@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4MOOD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <img src="images/arrow/iPhone11Pro/menu/hamburger.png" alt="hamburger" id="hamburger" onclick="hamburgerFunc()">
+    <img src="images/coolicon.png" alt="" id="hamburger-close" onclick="closeHamburger()">
+    <!-- navigation -->
+    <nav>
+   <!-- logo -->
+   <img src="images/4MOOD.png" alt="4MOOD" id="logo" onclick="window.location='mainpage.html';">
+  
+   <ul id="navigation">
+       <li><a href="mainpage.html#sale" style="color:#D0191D;">Розпродаж</a></li>
+       <li><a href="new.html">Новинки</a></li>
+       <li id="accessories"><a href="all-items.html">Одяг та аксесуари</a></li>
+       <li id="login-responsive" onclick="loginResponsive()">Профіль</li>
+       <li> 
+        <ul id="responsive-accesories">
+            <li>Одяг та аксесуари:</li>
+            <li><a href="shirts.html">Топи</a></li>
+            <li><a href="bags.html">Сумки</a></li>
+            <li><a href="jewelry.html">Біжутерія</a></li>
+            <li><a href="skirts.html">Спідниці</a></li>
+            <li><a href="belts.html">Пояси</a></li>
+            <li><a href="scarf.html">Зимовий одяг</a></li>
+            <li><a href="dresses.html">Сукні</a></li>
+            <li><a href="shoes.html">Взуття</a></li>
+            <li><a href="all-items.html">Переглянути все</a></li>
+        </ul>
+        </li>
+   </ul>
+   </nav>
+   <div id="dropdown-triangle"></div>
+   <div class="grid" id="dropdown"> 
+       <div style="background-image: url(images/4245398746_2_6_8.jpeg); background-size:70%"  onclick="window.location='shirts.html';">Топи</div>
+       <div style="background-image: url(images/dropdown/bags.jpg); background-size: cover; background-repeat: no-repeat;" onclick="window.location='bags.html';"> Сумки</div>
+       <div style="background-image: url(images/dropdown/jewerly.jpg);" onclick="window.location='jewelry.html';">Біжутерія</div>
+       <div style="background-image: url(images/4399317716_2_6_8.jpeg);" onclick="window.location='skirts.html';">Спідниці</div>
+       <div style="background-image: url(images/dropdown/belts.jpg);" onclick="window.location='belts.html';">Пояси</div>  
+       <div style="background-image: url(images/dropdown/scarfs.jpg); background-size: 70%;" onclick="window.location='scarf.html';">Зимовий одяг</div>
+       <div style="background-image: url(images/4390361806_2_6_8-removebg.png); background-size: 70%;" onclick="window.location='dresses.html';">Сукні</div>
+       <div style="background-image: url(images/dropdown/shoes.jpg);  background-size: contain;" onclick="window.location='shoes.html';">Взуття</div>
+       <div style="background-image: url(images/dropdown/all.jpg);" onclick="window.location='all-items.html';">Переглянути все
+       </div>
+   </div>
+   <!-- search -->
+   <section id="search-section">
+       <form style="display:flex;" onsubmit="window.location='final.html'; return false">
+           <img src="images/iconmonstr-search-thin.svg" alt="search" id="search-icon">
+           <input type="text" name="search" id="search" placeholder="Пошук" onsubmit="window.location='final.html';">
+       </form>
+       
+       <!-- profile -->
+       <ul id="profile-section">
+           <li id="login-preview">Профіль</li>
+           <li id="basket">   Кошик</li>
+           <li class="quantity" id="quantity">1</li>
+       </ul>
+       </section>
+</header>
+<!-- pop up -->
+<form id="pop-up" onsubmit="popFunc(); return false">
+<section id="first-pop">
+    <label for="email-pop" id="heading-pop">Нагадати пароль</label>
+    <img src="images/coolicon.png" alt="" id="close-pop" class="close">
+</section>
+<section id="second-pop">
+    <input type="email" name="email" id="email-pop" placeholder="Електрона пошта" required>
+    <input type="submit" name="login-submit" id="pop-submit" value="Надіслати">
+</section>
+<section id="done">
+<p id="confirm-done"></p></section>
+</form>
+<!-- pop up create account -->
+<form id="pop-up-create" onsubmit="popFuncSubmit(); return false">
+    <section id="first-pop-create">
+        <label for="email-pop-create" id="heading-pop-create">Реєстрація</label>
+        <img src="images/coolicon.png" alt="" id="close-pop-create" class="close">
+    </section>
+    <section id="second-pop-create">
+        <input type="name" name="pop-up-name-create" id="name-pop-create" required placeholder="Ім’я">
+        <input type="name" name="pop-up-name-create" id="surname-pop-create" required placeholder="Прізвище">
+        <input type="number" name="tel" id="tel-pop-create" placeholder="Номер мобільного телефону" required>
+        <input type="email" name="email" id="email-pop-create" placeholder="Електрона пошта" required>
+        <input type="submit" name="login-submit-create" id="pop-submit-create" value="Створити обліковий запис">
+    </section>
+    <section id="done-create">
+    <p id="confirm-done-create"></p></section>
+    </form>
+<!-- Login  -->
+<form onsubmit="window.location='final.html'; return false" id="login-page">
+<section id="login-heading">
+    <h5 >Увійдіть у свій профіль</h5>
+    <img src="images/coolicon.png" alt="" id="close-login" class="close">
+</section>
+    <input type="email" name="email" id="login-email" placeholder="Електрона пошта" required>
+    <input type="password" name="password" id="login-password" placeholder="Пароль" required>
+    <fieldset id="fieldset">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">запам’ятати мене</label>
+    </fieldset>
+    <input type="submit" name="login-submit" id="login-submit" value="Увійдіть">
+    <p onclick="emailRemind()">Я забув (-ла) свій пароль</p>
+    <input type="button" name="login-submit" id="login-create" value="Створити обліковий запис" onclick="popFuncCreate()">
+</form>
+<!-- Basket -->
+<div id="basket-preview">
+    <section class="items">
+        <div id="hbasket">
+            <h5 id="basket-heading"> Кошик (<span id="count">1</span>)</h5> 
+            <img src="images/coolicon.png" alt="" id="close" class="close">
+        </div>
+        <div id="first-item"> 
+            <section class="item">
+                <img src="images/coolicon.png" alt="" class="close" id="close-first">
+                <img src="images/minimalism-UhIttUPXxeU-unsplash.jpg" alt="item-photo" class="item-photo"> 
+                <section class="items-quantity-basket">  
+                    <span>Подарунок за першу покупку</span>
+                </section>
+            </section>
+        <p>Безкоштовно</p>
+        </div>
+        <div id="second-item">
+            <section class="item" >
+                <img src="images/coolicon.png" alt="" class="close" id="close-second">
+                <img src="images/bags/3.jpg" alt="item-photo" class="item-photo"> 
+                <section class="items-quantity-basket" >    
+                    <span>Сумка під крокодила</span>
+                    <section class="adding">
+                        <img src="images/minus.png" alt="minus" class="signs" id="minus-second"  onclick="secondSubtract()">
+                        <span id="quantity-second-item">1</span>
+                        <img src="images/plus.png" alt="plus" class="signs" id="plus-first"  onclick="secondAdding()">
+                    </section>           
+                </section>
+            </section>
+            <p><span id="item-price">799</span> UAH</p>
+        </div>
+        <div class="delivery ">
+            <p class="hdelivery">Доставка</p>
+            <p><span id="delivery-price">30</span> UAH</p>
+        </div>
+        <div class="delivery hdelivery">
+    <p>Всього:</p>
+    <p><span id="total-amount"></span> UAH</p>
+        </div >
+        <div class="delivery responsive-delivery">
+            <p style="color: #555555">30 днів для повернення<br>
+            Безкоштовна доставка від 999 UAH</p>
+            <button id="order" onclick="window.location='final.html'">Перейти до оформлення</button>
+     </div>
+     </section>
+</div>
+
+    <!-- main part -->
+    <main id="faq-main">
+        <div id="faq-aside">
+            <h6 id="payment" class="hchoose">Оплата i доставка</h6>
+            <h6 id="return">Повернення</h6>
+            <h6 id="questions">Запитання-відповіді</h6>
+        </div>
+
+  <div id="faq-description">
+    <div id="first-heading-description">
+        &emsp;
+        Через COVID-19 багато наших транспортних перевізників стикаються із затримками доставки замовлень. Здоров’я та безпека наших клієнтів i команд є нашим пріоритетом №1, i ми цінуємо ваше терпіння та розуміння. 
+        <br> <br>
+        &emsp;
+        <span>Безкоштовна доставка</span>
+         при мінімальній онлайн-покупці на суму від <span>999 UAH</span>. Сума покупки має бути здійснена в одній транзакції після всіх застосовних знижок. Пропозиція не поширюється на придбання подарункових карток. <span>4MOOD</span> залишає за собою право змінити або скасувати цю акцію в будь-який час без попередження. <br>
+         Ми приймаємо такі форми оплати:
+             <ul>
+                 <li>Visa</li>
+                 <li>Master Card</li>
+                 <li>PayPal</li>
+                 <li>UnionPay</li>
+             </ul>
+         
+    </div>
+    <div id="second-heading-description" style="display: none;">
+        &emsp;
+        Онлайн покупки можна повернути протягом <span>30 днів</span> із дати відправлення. Для оформлення повернення зателефонуйте за номером <a href="tel:+380441234567"> +38 044 123 45 67</a>  або звернітся у найближчий магазин, який знаходиться за адресою <a href="https://goo.gl/maps/j4nb3KxrEVJ9SV1LA" style="text-decoration:underline">Київ, Спортивна площа 1а, 
+            ТРЦ Гулівер, 3 поверх</a><br> <br>
+        &emsp; 
+        Повернення та обмін регулюються наведеними нижче умовами. <br> <br>
+        &emsp;
+        Речі мають бути:
+        <ul>
+            <li>з усіма прикріпленими бірками</li>
+            <li>непраними</li>
+            <li>неношеними</li>
+            <li>непошкодженими</li>
+            <li>в оригінальній упаковці.</li>
+        </ul> <br>
+        
+    </div>
+    <div id="third-heading-description" style="display: none;">
+        <h6>Де знаходяться ваші магазини?</h6>
+        <p>Наразі, ми маємо один магазин за адресою <a href="https://goo.gl/maps/j4nb3KxrEVJ9SV1LA" style="text-decoration:underline">Київ, Спортивна площа 1а, 
+            ТРЦ Гулівер, 3 поверх</a></p>        
+            <h6>Чи потрібно реєструватися перед тим, як зробити замовлення?</h6>
+        <p>
+            Вам не потрібно реєструватися перед оформленням замовлення. Але ви можете зареєструватися, щойно завершите замовлення. Наш процес реєстрації швидкий, безкоштовний i заощадить ваш час для майбутніх покупок.</p>
+        <h6>Я не можу знайти відповіді на свої запитання. Як мені зв’язатися зі службою підтримки?</h6>
+        <p>Ви можете подзвонити нам в будні з 9:00 до 18:00 за номером <a href="tel:+380441234567"> +38 044 123 45 67</a> щоб зв’язатися зі службою підтримки клієнтів.</p>
+    </div>
+  </div>
+      
+    </main>
+
+    <!-- footer  -->
+    <footer>
+        <div id="logo-and-lang">
+            <a href="#" id="logo-white"><img src="images/4MOODwhite.svg" alt="logo" onclick="window.location='mainpage.html';"></a>
+            <ul id="language">
+            <li>Українська</li>
+            <li>|</li>
+            <li><a href="payment-eng.html">English</a></li>
+            </ul> 
+              <p id="copyright">&#169; All rights reserved</p> 
+        </div>
+        <!-- info -->
+        <div class="info">
+            <ul>
+                <li><h4>Інформація</h4></li>
+                <li><a href="about-us.html">Про компанію</a></li>
+                <li><a href="#login-preview"  onclick="loginOpenFunc()">Профіль</a></li>
+                <li><a href="payment.html">Оплата i доставка</a></li>
+                <li><a href="return.html">Повернення</a></li>
+                <li><a href="faq.html">Запитання-відповіді</a></li>
+            </ul> 
+        </div>
+        <!-- contacts -->
+        <div class="contacts">
+            <ul>
+                <li><h4>Контакти</h4></li>
+                <li><a href="tel:0441234567">044 123 45 67</a></li>
+                <li>з 9:00 до 18:00</li>
+                <li><a href="mailto:4mood@gmail.com">4mood@gmail.com</a></li>
+                <li>Київ, Спортивна площа 1а, <br> 
+                    ТРЦ Гулівер, 3 поверх </li>
+                <li><a href="https://goo.gl/maps/j4nb3KxrEVJ9SV1LA" style="text-decoration:underline">Показати на мапі</a></li>
+            </ul>
+        </div>
+        <!-- social-->
+        <div class="follow">
+            <ul>
+                <li><h4>Follow us</h4></li>
+                <li id="logos">
+                    <img src="images/facebook.svg" alt="facebook" onclick="window.location='https://www.facebook.com/'">
+                    <img src="images/instagram.svg" alt="instagram" onclick="window.location='https://instagram.com'">
+                    <img src="images/youtube.svg" alt="youtube" onclick="window.location='https://youtube.com'">
+                    <img src="images/twitter.svg" alt="twitter" onclick="window.location='https://twitter.com'">
+                   
+                </li>
+            </ul>
+           
+        </div>
+    </footer>
+    <script src="faq.js"></script>
+</body>
+</html>
