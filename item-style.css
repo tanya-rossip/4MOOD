@@ -354,7 +354,7 @@ body {
     background-color: #D0191D;
   } */
   
-  #basket-preview h5 {
+  #basket-preview  {
     margin-left: 1.7vw;
   }
   
@@ -966,6 +966,7 @@ body {
 
   h5 {
     text-align: center;
+    line-height: 2rem;
   }
 
   #login-heading h5 {
