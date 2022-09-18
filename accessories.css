@@ -1256,11 +1256,7 @@ body {
   #arrow-scroll-left  {
       top: 400px;
   }
-  #logo {
-    width: 17vw;
-    height: auto;
-    margin-left: 9vw;
-  }
+  
   #hero {
     display: none;
   }
@@ -1295,7 +1291,6 @@ body {
 
   #hamburger {
     display: initial;
-    margin-left: 7.5vw;
 
   }
   #photo-items figcaption {
