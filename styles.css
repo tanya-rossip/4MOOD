@@ -1458,6 +1458,11 @@ margin: 0;
 }
 
 @media only screen and (max-width: 1050px) {
+   h4 {
+    margin: 0;
+    padding: 0;
+  }
+  
   #final-main p {
     font-size: 1.5rem;
   }
