@@ -1429,6 +1429,10 @@ body {
     width: 100%;
   }
 
+  #logo { 
+  height: 4vw;
+}
+    
   footer {
     flex-direction: column-reverse;
   }
