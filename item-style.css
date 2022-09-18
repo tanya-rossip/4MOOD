@@ -1427,7 +1427,6 @@ body {
 
   #hamburger {
     display: initial;
-    margin-left: 2vw;
 
   }
   #photo-items figcaption {
@@ -1471,11 +1470,7 @@ body {
   
 }
 
-@media only screen and (max-width: 600px) {
- 
- 
 
-}
 
 @media only screen and (max-width: 400px) {
   footer ul li {
