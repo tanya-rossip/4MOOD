@@ -1297,8 +1297,12 @@ body {
 
   #hamburger {
     display: initial;
-
   }
+    
+    #logo {
+    height: 4vw;
+  }
+    
   #photo-items figcaption {
     width: 100%;
   }
