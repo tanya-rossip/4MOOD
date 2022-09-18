@@ -1371,10 +1371,6 @@ body {
     flex-direction: row;
   }
 
-  #logo {
-    width: 17vw;
-    height: auto;
-  }
  
   #navigation {
     display: none;
