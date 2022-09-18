@@ -1280,6 +1280,11 @@ body {
     width: 95vw;
   }
 
+    figcaption {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+    
   header ul li:first-child {
     font-weight: 700 !important;
     margin-top: 0 !important;
