@@ -1764,7 +1764,6 @@ margin: 0;
 #faq-aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 #faq-description h6 {
