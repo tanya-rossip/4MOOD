@@ -1694,6 +1694,10 @@ margin: 0;
   #hamburger {
     display: initial;
   }
+  
+  #logo { 
+  height: 4vw;
+}
 
   #basket-preview p {
     margin-bottom: 1vw;
