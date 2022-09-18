@@ -1277,6 +1277,7 @@ body {
   header {
     display: flex;
     justify-content: space-between;
+    width: 95vw;
   }
 
   header ul li:first-child {
@@ -1338,5 +1339,10 @@ body {
   #basket-preview  * {
     margin-bottom: 5vw;
   }
+    
+   #profile-section {
+    padding: 0;
+  }
+
 
 }
