@@ -90,6 +90,12 @@ closePop.addEventListener("click", function() {
 
 const testFunc = () => {
     orderBtn.disabled = true;
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
+    basketMenu.style.display = "initial";
+    orderBtn.disabled = true;
     secondItem.style.display = "flex";
     quantity.innerHTML = parseInt(quantity.innerHTML) + 1;
     count.innerHTML = parseInt(count.innerHTML) + 1;  
