@@ -1795,7 +1795,15 @@ margin: 0;
     height: 9vw;
   }
 
- 
+ #logo { 
+  height: 3vw;
+  margin: 0;
+}
+
+#search-section,
+#basket {
+  margin: 0;
+}
 
   #subscribe p,
   #subscribe h3,
