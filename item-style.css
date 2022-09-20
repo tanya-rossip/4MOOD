@@ -1481,6 +1481,10 @@ body {
     margin-left: 2vw;
   }
   
+     .items-quantity-basket span {
+    margin-right: 1vw;
+  }
+    
   #basket-preview {
     top: 0;
     width: 100%;
