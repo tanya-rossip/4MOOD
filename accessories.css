@@ -1070,6 +1070,7 @@ body {
  
   main h5 {
     text-align: left;
+    margin: 0;
   }
 
   #arrow-scroll,
