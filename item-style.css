@@ -1324,6 +1324,10 @@ body {
   margin: 0;
 }
   
+    main h5 {
+  line-height: 2rem;
+}
+    
   #other-photos img {
     width: 95vw;
     height:auto;
