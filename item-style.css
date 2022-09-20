@@ -1311,7 +1311,15 @@ body {
     justify-content: space-between;
   }
 
- 
+ #logo { 
+  height: 3vw;
+  margin: 0;
+}
+
+#search-section,
+#basket {
+  margin: 0;
+}
   
   #other-photos img {
     width: 95vw;
