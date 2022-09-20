@@ -1068,7 +1068,9 @@ body {
  /* responsive */
 @media only screen and (max-width: 1300px) {
  
-
+  main h5 {
+    text-align: left;
+  }
 
   #arrow-scroll,
   #arrow-scroll-left  {
