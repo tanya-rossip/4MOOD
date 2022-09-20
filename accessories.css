@@ -1295,6 +1295,16 @@ body {
     align-self: center;
   }
 
+    #logo { 
+  height: 3vw;
+  margin: 0;
+}
+
+#search-section,
+#basket {
+  margin: 0;
+}
+    
   #hamburger {
     display: initial;
   }
