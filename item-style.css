@@ -1227,6 +1227,9 @@ body {
 
  #marquee {
   font-size: 1.2rem;
+  line-height: 3rem;
+  overflow: hidden;
+  height: 40px;
 }
 
   header ul {
