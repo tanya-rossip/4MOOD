@@ -1806,6 +1806,10 @@ margin: 0;
     background-image: none;
     height: 9vw;
   }
+  
+  #basket-preview  * {
+    margin-bottom: 5vw;
+  }
 
  #logo { 
   height: 4vw;
