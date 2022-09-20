@@ -1834,7 +1834,14 @@ margin: 0;
   #subscribe {
     height: 50vw;
   }
+.items-quantity-basket span  {
+    margin-right: 3vw;
+  }
 
+  #first-item p
+  {
+    font-size: 1rem;
+  }
   
 }
 
