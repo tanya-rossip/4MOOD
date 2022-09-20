@@ -1207,7 +1207,7 @@ body {
   .clothing {
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 90vw;
   }
   .clothing img {
     width: 100%;
