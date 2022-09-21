@@ -1414,6 +1414,10 @@ margin: 0;
   align-items: center;
  }
 
+ #basket span {
+    display: none;
+  }
+
  #hamburger-close {
   width: auto;
   height: 1rem;
