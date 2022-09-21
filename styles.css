@@ -1720,6 +1720,10 @@ margin: 0;
     display: initial;
   }
   
+   #basket span {
+    display: none;
+  }
+  
   #logo { 
   height: 4vw;
 }
