@@ -25,6 +25,10 @@ body {
     justify-content: space-between;
     margin-bottom: 15px;
     font-size: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
   }
   
   #logo {
@@ -64,7 +68,8 @@ body {
     text-align: center;
     width: 1.2rem;
     padding: 0;
-    margin: 0;
+    margin: 2px;
+    /* margin: 0; */
     border-radius: 99%;
     font-size: 0.5em;
     background-color: #D0191D;
@@ -115,13 +120,18 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   
-  #hamburger {
+  #hamburger{
     width: 40px;
     height: 40px;
    }
+
+   #basket-icon {
+    width: 30px;
+   }
   
    #hamburger,
-   #hamburger-close {
+   #hamburger-close,
+   #basket-icon {
     display: none;
     align-items: center;
    }
@@ -185,7 +195,7 @@ body {
   #basket-preview{
     position: absolute;
     width: 43.3vw;
-    z-index: 200;
+    z-index: 1000;
     right: 0;
     top: 5.9vw;
     height: 100%;
@@ -254,14 +264,13 @@ body {
   .items-quantity-basket {
     display: flex;
     flex-direction: column;
-  }
-  
-  .items-quantity-basket
-   {
     margin-left: 30px;
     font-weight: 400;
     font-size: 0.8rem;
+    width: 80%;
   }
+  
+  
   
   .adding {
     display: flex;
@@ -1068,10 +1077,7 @@ body {
  /* responsive */
 @media only screen and (max-width: 1300px) {
  
-  main h5 {
-    text-align: left;
-    margin: 0;
-  }
+
 
   #arrow-scroll,
   #arrow-scroll-left  {
@@ -1192,7 +1198,17 @@ body {
     display: none;
   }
 
+  main h5 {
+    text-align: left;
+    margin: 0;
+  }
+
   #accessories {
+    display: none;
+  }
+
+
+  #basket span {
     display: none;
   }
 
@@ -1214,7 +1230,7 @@ body {
   }
   .clothing img {
     width: 100%;
-    height: auto
+    height: auto;
   }
 
   .clothing figcaption {
@@ -1259,7 +1275,7 @@ body {
   #arrow-scroll-left  {
       top: 400px;
   }
-  
+ 
   #hero {
     display: none;
   }
@@ -1269,8 +1285,7 @@ body {
 
   #search-section form,
   #search-section input,
-  #search-section img,
-  #quantity
+  #search-icon
   {
     display: none;
   }
@@ -1283,37 +1298,43 @@ body {
     width: 95vw;
   }
 
-    figcaption {
+  figcaption {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-    
+
   header ul li:first-child {
     font-weight: 700 !important;
     margin-top: 0 !important;
   }
 
   #hamburger,
-  #hamburger-close {
+  #hamburger-close,
+  #basket-icon {
     align-self: center;
   }
 
-
-
-#search-section,
-#basket {
-  margin: 0;
-}
-    
-  #hamburger {
+  #hamburger,
+  #basket-icon {
     display: initial;
   }
-    
-    #logo {
-    height: 4vw;
-        margin: 0;
+
+  #profile-section {
+    display: flex;
+    flex-direction: row;
   }
-    
+
+
+  #logo { 
+    height: 5vw;
+    margin: 0;
+  }
+  
+  #search-section,
+  #basket {
+    margin: 0;
+  }
+
   #photo-items figcaption {
     width: 100%;
   }
@@ -1359,18 +1380,9 @@ body {
   #basket-preview  * {
     margin-bottom: 5vw;
   }
-    
-   #profile-section {
+
+  #profile-section {
     padding: 0;
-  }
-
-    .items-quantity-basket span  {
-    margin-right: 3vw;
-  }
-
-  #first-item p
-  {
-    font-size: 1rem;
   }
 
 }

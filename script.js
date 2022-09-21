@@ -37,6 +37,9 @@ const headingPopCreate = document.getElementById("heading-pop-create")
 const confirmDoneCreate = document.getElementById("confirm-done-create")
 
 const scrollUp = document.getElementById("arrow-scroll-up")
+const aroLeftMood = document.getElementById("arrow-scroll-left-mood");
+const aroRightMood = document.getElementById("arrow-scroll-mood")
+const mood = document.getElementById("mood-girls-img")
 
 // dropdown
 acceessories.addEventListener("mouseover", function() {
@@ -109,6 +112,10 @@ closePop.addEventListener("click", function() {
 // basket
 
 basket.addEventListener("click", function() {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
     basketMenu.style.display = "initial";
     main.style.opacity = "0.5";
     loginPage.style.display = "none";
@@ -237,7 +244,7 @@ aroRight.addEventListener("click", function() {
 });
 
 sale.addEventListener("scroll", function() {
-    if (sale.scrollLeft > 815) {
+    if (sale.scrollLeft > 1000) {
         aroRight.style.display = "none";
         aroLeft.style.display = "initial";
 
@@ -252,7 +259,7 @@ sale.addEventListener("scroll", function() {
         aroLeft.style.display = "initial";
     }
 
-    if (sale.scrollLeft < 815) {
+    if (sale.scrollLeft < 1000) {
         aroRight.style.display = "initial";
     }
 
@@ -373,3 +380,50 @@ const popFuncEng = () => {
         })
 }
 
+// mood for girls
+
+aroRightMood.addEventListener("click", function() {
+    if (window.matchMedia("(max-width: 1050px)").matches) {
+        mood.scrollBy({
+            left: 340,
+            behavior: "smooth"
+        });      } else {
+            mood.scrollBy({
+                left: 450,
+                behavior: "smooth"
+            });
+      }
+   
+
+});
+
+
+mood.addEventListener("scroll", function() {
+    if (mood.scrollLeft > 500) {
+        aroRightMood.style.display = "none";
+        aroLeftMood.style.display = "initial";
+
+    }
+    if (mood.scrollLeft === 0) {
+        aroLeftMood.style.display = "none";
+        aroRightMood.style.display = "initial";
+
+    }
+
+    if (mood.scrollLeft !== 0) {
+        aroLeftMood.style.display = "initial";
+    }
+
+    if (mood.scrollLeft < 500) {
+        aroRightMood.style.display = "initial";
+    }
+
+})
+
+aroLeftMood.addEventListener("click", function() {
+    mood.scrollBy({
+        left: -450,
+        behavior: "smooth"
+    });
+    aroRightMood.style.display = "initial";
+});

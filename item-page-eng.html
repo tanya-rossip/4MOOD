@@ -67,8 +67,9 @@
            <!-- profile -->
            <ul id="profile-section">
                <li id="login-preview">Account</li>
-               <li id="basket">Shopping bag</li>
-               <li class="quantity" id="quantity">1</li>
+               <li id="basket"> <span>Shopping bag</span>
+                <img src="images/basket_96252.svg" alt="basket-icon" id="basket-icon"></li>
+               <li class="quantity" id="quantity">0</li>
            </ul>
            </section>
    </header>
@@ -122,7 +123,7 @@
    <div id="basket-preview">
         <section class="items">
             <div id="hbasket">
-                <h5 id="basket-heading"> Shopping bag (<span id="count">1</span>)</h5> 
+                <h5 id="basket-heading"> Shopping bag (<span id="count">0</span>)</h5> 
                 <img src="images/coolicon.png" alt="" id="close" class="close">
             </div>
             <div id="first-item"> 
@@ -130,25 +131,25 @@
                     <img src="images/coolicon.png" alt="" class="close" id="close-first">
                     <img src="images/minimalism-UhIttUPXxeU-unsplash.jpg" alt="item-photo" class="item-photo"> 
                     <section class="items-quantity-basket">  
-                        <span>Gift for the first purchase</span>
+                        <p class="description-item">Gift for the first purchase</p>
                     </section>
                 </section>
-            <p>For free</p>
+            <p class="item-price">0 USD</p>
             </div>
             <div id="second-item">
                 <section class="item" >
                     <img src="images/coolicon.png" alt="" class="close" id="close-second">
                     <img src="images/bags/3.jpg" alt="item-photo" class="item-photo"> 
                     <section class="items-quantity-basket" >    
-                        <span>Crocodile print handbag</span>
+                        <p class="description-item">Crocodile print handbag</p>
                         <section class="adding">
                             <img src="images/minus.png" alt="minus" class="signs" id="minus-second"  onclick="secondSubtract()">
-                            <span id="quantity-second-item">1</span>
+                            <span id="quantity-second-item">0</span>
                             <img src="images/plus.png" alt="plus" class="signs" id="plus-first"  onclick="secondAdding()">
                         </section>           
                     </section>
                 </section>
-                <p><span id="item-price">28</span> USD</p>
+                <p  class="item-price"><span id="item-price">28</span> USD</p>
             </div>
             <div class="delivery ">
                 <p class="hdelivery">Shipping</p>
@@ -156,7 +157,7 @@
             </div>
             <div class="delivery hdelivery">
         <p>Total:</p>
-        <p><span id="total-amount"></span> USD</p>
+        <p><span id="total-amount">2</span> USD</p>
             </div >
             <div class="delivery responsive-delivery">
                 <p style="color: #555555">Refund or exchange within 30 days<br>
@@ -181,7 +182,7 @@
               <h5>Crocodile print handbag</h5> 
               <p> <span class="old-price">56 USD</span> <span class="new-price">28 USD</span> <span class="discount">-50%</span></p>
              
-              <form id="form-item" onsubmit="testFunc();return false;">
+              <form id="form-item" onsubmit="shoppingBag(); return false;">
               <fieldset>
                   <legend>Color:</legend>
                   <input type="radio" id="color-one"

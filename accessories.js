@@ -101,6 +101,10 @@ const loginOpenFunc = () => {
 // basket
 
 basket.addEventListener("click", function() {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
     basketMenu.style.display = "initial";
     main.style.opacity = "0.5";
     loginPage.style.display = "none";
@@ -119,6 +123,10 @@ close.addEventListener("click", function() {
 
 // hamburger
 const hamburgerFunc = () => {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
     navigation.style.display = "flex";
     navigation.style.flexDirection = "column";
     navigation.style.position = "absolute";

@@ -25,6 +25,10 @@ header {
   justify-content: space-between;
   margin-bottom: 15px;
   font-size: 1rem;
+  position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
 }
 
 
@@ -62,7 +66,7 @@ header li {
   text-align: center;
   width: 1.2rem;
   padding: 0;
-  margin: 0;
+  margin: 2px;
   border-radius: 99%;
   font-size: 0.5em;
   background-color: #D0191D;
@@ -167,7 +171,7 @@ header a:hover {
 #basket-preview{
   position: absolute;
   width: 43.3vw;
-  z-index: 200;
+  z-index: 1000;
   right: 0;
   top: 5.9vw;
   height: 100%;
@@ -181,6 +185,8 @@ header a:hover {
 #basket-preview section .close {
   margin-right: 15px;  
 }
+
+
 
 .item-photo {
   width: 7.14vw;
@@ -233,13 +239,13 @@ header a:hover {
   cursor: pointer;
 }
 
-.items-quantity-basket {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .items-quantity-basket
  {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
   margin-left: 30px;
   font-weight: 400;
   font-size: 0.8rem;
@@ -474,18 +480,20 @@ h1.first-heading {
 }
 
 /* Sale */
-#arrow-scroll {
+#arrow-scroll,
+#arrow-scroll-mood {
   right: 9vw;
 }
 
-#arrow-scroll-left {
+#arrow-scroll-left,
+#arrow-scroll-left-mood {
   left: 9vw;
   transform: rotate(0.5turn);
   display: none;
 }
 
 #arrow-scroll,
-#arrow-scroll-left  {
+#arrow-scroll-left {
   background-color: #FFF;
   border-radius: 50%;
   position: absolute;
@@ -494,6 +502,20 @@ h1.first-heading {
   padding: 15px 19px;
   cursor: pointer;
   top: 65vw;
+}
+
+#arrow-scroll-mood,
+#arrow-scroll-left-mood {
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  height: 17px;
+  width: 10px;
+  padding: 15px 19px;
+  cursor: pointer;
+  display: none;
+  top: 1020px;
+
 }
 
 .photo-items {
@@ -618,7 +640,7 @@ h3 {
 }
 
 #subscribe p {
-  font-size: 1.11111111111rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0em;
@@ -722,9 +744,6 @@ footer a[href^="mailto:"] {
   text-decoration: underline;
 }
 
-.mood-girls-img {
-  overflow: scroll;
-}
 
 .info,
 .follow,
@@ -1384,9 +1403,9 @@ margin: 0;
     text-align: center;
   }
 
+  
 
-/*  */
-
+    
  #final { 
   display: flex;
   flex-direction: column;
@@ -1406,21 +1425,17 @@ margin: 0;
   height: 40px;
  }
 
- #basket-icon {
-  width: 8vw;
- }
 
+ #basket-icon {
+  width: 30px;
+ }
 
  #hamburger,
  #hamburger-close,
-#basket-icon{
+ #basket-icon {
   display: none;
   align-items: center;
  }
-
- #basket span {
-    display: none;
-  }
 
  #hamburger-close {
   width: auto;
@@ -1468,11 +1483,16 @@ margin: 0;
 }
 
 @media only screen and (max-width: 1050px) {
-   h4 {
+
+  #sale figcaption {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4 {
     margin: 0;
     padding: 0;
   }
-  
   #final-main p {
     font-size: 1.5rem;
   }
@@ -1519,11 +1539,6 @@ margin: 0;
   header ul li:first-child {
     font-weight: 700 !important;
     margin-top: 0 !important;
-  }
-
-    #sale figcaption {
-    font-size: 1.5rem;
-    line-height: 2rem; 
   }
 
 
@@ -1615,7 +1630,7 @@ margin: 0;
     margin-top: 3vw;
   }
 
-  
+
 
   #email-button {
     height: 7vw;
@@ -1625,52 +1640,66 @@ margin: 0;
   #email-subscribe {
     height: 7vw;
   }
-  
+
   #subscribe input:first-of-type {
     background-image: none;
     height: 7vw;
     padding: 0;
   }
 
-  #subscribe h3 {
-    font-size: 1.5rem;
-  }
 
-  #subscribe p {
-    font-size:  1.1rem;
-    width: 65vw;
-  }
-
-  #mood-for-girls  {
-    display: none;
-  }
-
-
-  #subscribe {
-    height: 40vw;
-    padding: 0;
-  }
-
- #email-subscribe::placeholder {
+  #email-subscribe::placeholder {
     font-size: 1.2rem;
     padding-left: 3vw;
+    line-height: 1rem;  
   }
   
 
   #subscribe p {
     margin: 0;
-    font-size:  1.5rem;
     width: 65vw;
   }
 
   #subscribe h3 {
     font-size: 2rem;
-    margin-top: 3vw;
+    margin-top: 3vw;  
   }
 
+
+  .items-quantity-basket span  {
+    margin-right: 3vw;
+  }
+
+  #first-item p
+  {
+    font-size: 1rem;
+  }
+    
   #subscribe h3,
   #subscribe p  {
     margin-bottom: 5vw;
+  }
+  
+.mood-girls-img {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 400px;
+}
+
+.mood-girls-img img {
+  height: 600px;
+  width: 600px;
+}
+
+#btn-for-girls button {
+  height: 10vw;
+  width: 50vw;
+  font-size: 1.5rem;
+
+}
+
+  #subscribe p {
+    text-align: center;
   }
 
   #input-and-btn input:first-of-type{
@@ -1682,13 +1711,20 @@ margin: 0;
     width: 4.5vw;
     right: 5vw;
     top: 90%;
-   
   }
 
   #arrow-scroll,
   #arrow-scroll-left  {
       top: 320px;
   }
+
+
+  #arrow-scroll-mood {
+    display: initial;
+  }
+  
+
+
 
   #hero {
     display: none;
@@ -1699,11 +1735,16 @@ margin: 0;
 
   #search-section form,
   #search-section input,
-  #search-icon,
-  #quantity
+  #search-icon
   {
     display: none;
   }
+
+  #profile-section {
+    display: flex;
+    flex-direction: row;
+  }
+
   #login-preview {
     display: none;
   }
@@ -1711,26 +1752,38 @@ margin: 0;
     width: 95vw;
     display: flex;
     justify-content: space-between;
+   
   }
   
-  #hamburger,
-  #hamburger-close,
-  #basket-icon{
-    align-self: center;
-  }
+
 
   #hamburger,
-  #basket-icon{
-    display: initial;
+  #hamburger-close,
+  #basket-icon {
+    align-self: center;
   }
   
-   #basket span {
+
+  #basket span {
     display: none;
   }
-  
+
   #logo { 
-  height: 4vw;
+  height: 5vw;
+  margin: 0;
 }
+
+#search-section,
+#basket {
+  margin: 0;
+}
+
+
+  
+  #hamburger,
+  #basket-icon {
+    display: initial;
+  }
 
   #basket-preview p {
     margin-bottom: 1vw;
@@ -1771,19 +1824,22 @@ margin: 0;
   #basket-preview {
     top: 0;
     width: 100%;
-    height: 200vh;
+    height: 100vh;
   }
-/* 
+
+  #basket-preview p {
+    margin-bottom: 1vw;
+  }
+
   #basket-preview  * {
     margin-bottom: 5vw;
-  } */
+  }
 
 /* FaQ */
 
 #faq-main {
   width: 90vw;
   height: 100%;
-  /* justify-content:space-evenly; */
   line-height: 1.3rem;
   flex-direction: column;
 }
@@ -1810,8 +1866,8 @@ margin: 0;
 
 @media only screen and (max-width: 600px) {
   #email-button {
-    height: 9vw;
-    width: 9vw;
+    height: 15vw;
+    width: 15vw;
   }
   
   #email-subscribe {
@@ -1820,22 +1876,10 @@ margin: 0;
   
   #subscribe input:first-of-type {
     background-image: none;
-    height: 9vw;
-  }
-  
-  #basket-preview  * {
-    margin-bottom: 5vw;
+    height: 15vw;
   }
 
- #logo { 
-  height: 4vw;
-  margin: 0;
-}
-
-#search-section,
-#basket {
-  margin: 0;
-}
+ 
 
   #subscribe p,
   #subscribe h3,
@@ -1848,20 +1892,12 @@ margin: 0;
   }
 
   #subscribe p {
-    font-size: 1.5rem;
+    width: 90%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
 
-  #subscribe {
-    height: 50vw;
-  }
-.items-quantity-basket span  {
-    margin-right: 3vw;
-  }
-
-  #first-item p
-  {
-    font-size: 1rem;
-  }
+ 
   
 }
 

@@ -10,15 +10,18 @@
 <body>
     <!-- arrow for responsive -->
     <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll-up" > 
+    <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll-mood" >
+    <img src="images/coolicon.svg" alt="arrow" id="arrow-scroll-left-mood">
     <!-- header -->
     <header>
         <img src="images/arrow/iPhone11Pro/menu/hamburger.png" alt="hamburger" id="hamburger" onclick="hamburgerFunc()">
         <img src="images/coolicon.png" alt="" id="hamburger-close" onclick="closeHamburger()">
+
+
         <!-- navigation -->
         <nav>
        <!-- logo -->
        <img src="images/4MOOD.png" alt="4MOOD" id="logo" onclick="window.location='mainpage-eng.html';">
-      
        <ul id="navigation">
            <li><a href="mainpage-eng.html#sale" style="color:#D0191D;">Sale</a></li>
            <li><a href="new-eng.html">New arrivals</a></li>
@@ -53,6 +56,7 @@
            <div style="background-image: url(images/dropdown/all.jpg);" onclick="window.location='all-items-eng.html';">See all
            </div>
        </div>
+       
        <!-- search -->
        <section id="search-section">
            <form style="display:flex;" onsubmit="window.location='final-eng.html'; return false">
@@ -63,9 +67,9 @@
            <!-- profile -->
            <ul id="profile-section">
                <li id="login-preview">Account</li>
-              <li id="basket"> <span>Shopping bag</span>
+               <li id="basket"> <span>Shopping bag</span>
                 <img src="images/basket_96252.svg" alt="basket-icon" id="basket-icon"></li>
-               <li class="quantity" id="quantity">1</li>
+                <li class="quantity" id="quantity">0</li>
            </ul>
            </section>
    </header>
@@ -119,7 +123,7 @@
    <div id="basket-preview">
         <section class="items">
             <div id="hbasket">
-                <h5 id="basket-heading"> Shopping bag (<span id="count">1</span>)</h5> 
+                <h5 id="basket-heading"> Shopping bag (<span id="count">0</span>)</h5> 
                 <img src="images/coolicon.png" alt="" id="close" class="close">
             </div>
             <div id="first-item"> 
@@ -130,7 +134,7 @@
                         <span>Gift for the first purchase</span>
                     </section>
                 </section>
-            <p>For free</p>
+            <p>0 USD</p>
             </div>
             <div id="second-item">
                 <section class="item" >
@@ -153,7 +157,7 @@
             </div>
             <div class="delivery hdelivery">
         <p>Total:</p>
-        <p><span id="total-amount"></span> USD</p>
+        <p><span id="total-amount">2</span> USD</p>
             </div >
             <div class="delivery responsive-delivery">
                 <p style="color: #555555">Refund or exchange within 30 days<br>
@@ -240,7 +244,7 @@
     <!-- social challenge -->
     <section id="mood-for-girls">
         <h2>#4MOODGIRLS</h2>
-        <div class="mood-girls-img">
+        <div class="mood-girls-img" id="mood-girls-img">
             <img src="images/mood4girls1.jpg" alt="1">
             <img src="images/mood4girls2.jpg" alt="2">
             <img src="images/mood4girls3.jpg" alt="3">

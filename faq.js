@@ -82,7 +82,10 @@ closePop.addEventListener("click", function() {
     // basket
     
     basket.addEventListener("click", function() {
-        totalAmount();
+        window.scroll({
+            top: 0,
+            behavior: "smooth"
+        });
         basketMenu.style.display = "initial";
         main.style.opacity = "0.7";
     })

@@ -30,7 +30,6 @@ let deliveryPrice = document.getElementById("delivery-price")
 let totalPrice = document.getElementById("total-amount")
 let quantity = document.getElementById("quantity")
 let count = document.getElementById("count")
-let orderBtn  = document.getElementById("order-button")
 const loginPage = document.getElementById("login-page")
 const loginOpen = document.getElementById("login-preview")
 const closeLogin = document.getElementById("close-login")
@@ -55,7 +54,6 @@ const secondPopCreate = document.getElementById("second-pop-create")
 const headingPopCreate = document.getElementById("heading-pop-create")
 const confirmDoneCreate = document.getElementById("confirm-done-create")
 const scrollUp = document.getElementById("arrow-scroll-up")
-
 
 //email-reminder
 
@@ -88,18 +86,14 @@ closePop.addEventListener("click", function() {
     loginPage.style.opacity = "1";
 })
 
-const testFunc = () => {
-    orderBtn.disabled = true;
+const shoppingBag = () => {
     window.scroll({
         top: 0,
         behavior: "smooth"
     });
     basketMenu.style.display = "initial";
-    orderBtn.disabled = true;
     secondItem.style.display = "flex";
-    quantity.innerHTML = parseInt(quantity.innerHTML) + 1;
-    count.innerHTML = parseInt(count.innerHTML) + 1;  
-    totalAmount();  
+    secondAdding();
 }
 
 
@@ -127,7 +121,6 @@ const totalAmount = () => {
     totalPrice.innerHTML = parseInt(itemPrice.innerHTML) * (parseInt(quantitySecond.innerHTML)) + parseInt(deliveryPrice.innerHTML);
     if (totalPrice.innerHTML > 30) {
         deliveryPrice.innerHTML = "0";
-        totalAmount();
     } else 
      {
         deliveryPrice.innerHTML = "2";
@@ -139,8 +132,10 @@ const totalAmount = () => {
     // basket
     
     basket.addEventListener("click", function() {
-        totalAmount();
-        loginPage.style.display = "none";        
+        window.scroll({
+            top: 0,
+            behavior: "smooth"
+        });        loginPage.style.display = "none";        
         basketMenu.style.display = "initial";
         main.style.opacity = "0.7";
         main.addEventListener("click", function() {
@@ -272,6 +267,7 @@ loginOpen.addEventListener("click", function() {
 })
 
 const loginOpenFunc = () => {
+    
     loginPage.style.display = "flex";
     main.style.opacity = "0.5";
     basketMenu.style.display = "none";

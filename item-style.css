@@ -94,6 +94,10 @@ body {
     justify-content: space-between;
     margin-bottom: 15px;
     font-size: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
   }
   
   
@@ -135,7 +139,8 @@ body {
     text-align: center;
     width: 1.2rem;
     padding: 0;
-    margin: 0;
+    margin: 2px;
+    /* margin: 0; */
     border-radius: 99%;
     font-size: 0.5em;
     background-color: #D0191D;
@@ -235,7 +240,7 @@ body {
   #basket-preview{
     position: absolute;
     width: 43.3vw;
-    z-index: 200;
+    z-index: 1000;
     right: 0;
     top: 5.9vw;
     height: 100%;
@@ -303,26 +308,29 @@ body {
   }
   
   .items-quantity-basket {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .items-quantity-basket
-   {
+    width: 80%;
     margin-left: 30px;
     font-weight: 400;
     font-size: 0.8rem;
   }
+
+  .description-item {
+    text-decoration: none !important;
+    margin-right: 10px !important;
+    color: black !important;
+  }
+
+  .items-quantity-basket span {
+    box-sizing: border-box;
+    margin-right: 5px;  
+    }
   
   .adding {
     display: flex;
     align-items: center;
     margin-top: 30px;
   }
-  
-  .adding span {
-    margin: 0 1vw;
-  }
+
   
   .adding img {
     height: auto;
@@ -354,7 +362,7 @@ body {
     background-color: #D0191D;
   } */
   
-  #basket-preview  {
+  #basket-preview h5 {
     margin-left: 1.7vw;
   }
   
@@ -601,9 +609,14 @@ body {
     width: 40px;
     height: 40px;
    }
+
+   #basket-icon {
+    width: 30px;
+   }
   
    #hamburger,
-   #hamburger-close {
+   #hamburger-close,
+   #basket-icon {
     display: none;
     align-items: center;
    }
@@ -626,6 +639,10 @@ body {
    width: 16vw;
   }
   
+  .item-price {
+    width: 80px;
+  }
+
   /* item-page */
   .old-price {
     font-weight: 500;
@@ -787,7 +804,9 @@ body {
   cursor: pointer;
   }
   
-
+main h5 {
+  line-height: 2rem;
+}
 
   legend {
     margin-bottom: 0.25rem;
@@ -966,7 +985,6 @@ body {
 
   h5 {
     text-align: center;
-    line-height: 2rem;
   }
 
   #login-heading h5 {
@@ -1057,6 +1075,9 @@ body {
     align-items: center;
     text-align: center;
   }
+
+ 
+    
 
 
 /* arrow-up */
@@ -1185,6 +1206,8 @@ body {
     font-size: 1.1rem;
   }
   
+ 
+
   .adding img {
     height: auto;
     width: 7vw;
@@ -1195,7 +1218,7 @@ body {
   #arrow-scroll-up {
     height: 5vw;
     width: 4.5vw;
-    top: 90%;
+    top: 85%;
     right: 2vw;
   }
 
@@ -1213,9 +1236,14 @@ body {
   }
   
   .item-photo {
-    width: 18vw;
-    height: 100%;
+    width: 20vw;
   }
+
+  #profile-section {
+    display: flex;
+    flex-direction: row;
+  }
+
 
   #responsive-accesories {
     display: initial;
@@ -1230,6 +1258,10 @@ body {
   line-height: 3rem;
   overflow: hidden;
   height: 40px;
+}
+
+#back-marq {
+  height: 20px;
 }
 
   header ul {
@@ -1314,20 +1346,8 @@ body {
     justify-content: space-between;
   }
 
- #logo { 
-  height: 4vw;
-  margin: 0;
-}
-
-#search-section,
-#basket {
-  margin: 0;
-}
+ 
   
-    main h5 {
-  line-height: 2rem;
-}
-    
   #other-photos img {
     width: 95vw;
     height:auto;
@@ -1351,12 +1371,8 @@ body {
     overflow: hidden;
     /* width: 90vw; */
   }
-    
-    #back-marq {
-  height: 20px;
-}
 
-    legend {
+  legend {
     font-size: 1.5rem;
     margin-bottom: 2vw;
   }
@@ -1365,7 +1381,8 @@ body {
     font-size: 1.5rem;
     line-height: 2rem;
   }
-    
+
+  
 .right {
   display: none;
 }
@@ -1374,6 +1391,9 @@ body {
   }
 
   
+  #basket span {
+    display: none;
+  }
 
   #item3-main-photo{
     display: none;
@@ -1400,14 +1420,14 @@ body {
   }
 
  
+ 
   #navigation {
     display: none;
   }
 
   #search-section form,
   #search-section input,
-  #search-section img,
-  #quantity
+  #search-icon
   {
     display: none;
   }
@@ -1417,6 +1437,16 @@ body {
   header {
     display: flex;
     justify-content: space-between;
+  }
+
+  #logo { 
+    height: 5vw;
+    margin: 0;
+  }
+  
+  #search-section,
+  #basket {
+    margin: 0;
   }
 
   #order {
@@ -1449,18 +1479,17 @@ body {
     align-self: center;
   }
 
-  #hamburger {
+  #hamburger,
+  #basket-icon {
     display: initial;
-
   }
+
+  
+
   #photo-items figcaption {
     width: 100%;
   }
 
-  #logo { 
-  height: 4vw;
-}
-    
   footer {
     flex-direction: column-reverse;
   }
@@ -1485,28 +1514,17 @@ body {
     margin-left: 2vw;
   }
   
-     .items-quantity-basket span {
-    margin-right: 1vw;
-  }
-    
   #basket-preview {
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
   }
 
   #basket-preview p {
     margin-bottom: 1vw;
   }
 
-  .items-quantity-basket span  {
-    margin-right: 3vw;
-  }
-
-  #first-item p
-  {
-    font-size: 1rem;
-  }
+  
 }
 
 

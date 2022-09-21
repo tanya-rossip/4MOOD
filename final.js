@@ -77,6 +77,10 @@ acceessories.addEventListener("mouseover", function() {
     // basket
 
 basket.addEventListener("click", function() {
+    window.scroll({
+        top: 0,
+        behavior: "smooth"
+    });
     basketMenu.style.display = "initial";
     main.style.opacity = "0.5";
     loginPage.style.display = "none";
