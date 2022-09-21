@@ -1401,13 +1401,15 @@ margin: 0;
   font-style: italic;
  }
 
- #hamburger {
+ #hamburger,
+#basket-icon{
   width: 40px;
   height: 40px;
  }
 
  #hamburger,
- #hamburger-close {
+ #hamburger-close,
+#basket-icon{
   display: none;
   align-items: center;
  }
@@ -1704,11 +1706,13 @@ margin: 0;
   }
   
   #hamburger,
-  #hamburger-close {
+  #hamburger-close,
+  #basket-icon{
     align-self: center;
   }
 
-  #hamburger {
+  #hamburger,
+  #basket-icon{
     display: initial;
   }
   
