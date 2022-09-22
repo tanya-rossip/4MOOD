@@ -1244,6 +1244,9 @@ main h5 {
     flex-direction: row;
   }
 
+     #quantity-second-item {
+  margin: 0 10px;
+ }
 
   #responsive-accesories {
     display: initial;
