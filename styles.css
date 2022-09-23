@@ -1749,7 +1749,7 @@ margin: 0;
     display: none;
   }
   header {
-    width: 95vw;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
    
