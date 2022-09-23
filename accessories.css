@@ -1295,7 +1295,7 @@ body {
   header {
     display: flex;
     justify-content: space-between;
-    width: 95vw;
+    width: 100vw;
   }
 
   figcaption {
