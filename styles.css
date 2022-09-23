@@ -1442,7 +1442,7 @@ margin: 0;
   height: 1rem;
   margin-left: 90vw;
   position: absolute;
-  top: 4%;
+  top: 20px;
   right: 10vw;
   z-index: 1001; 
 }
