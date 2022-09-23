@@ -385,7 +385,7 @@ const popFuncEng = () => {
 aroRightMood.addEventListener("click", function() {
     if (window.matchMedia("(max-width: 1050px)").matches) {
         mood.scrollBy({
-            left: 440,
+            left: 400,
             behavior: "smooth"
         });      } else {
             mood.scrollBy({
@@ -422,7 +422,7 @@ mood.addEventListener("scroll", function() {
 
 aroLeftMood.addEventListener("click", function() {
     mood.scrollBy({
-        left: -450,
+        left: -400,
         behavior: "smooth"
     });
     aroRightMood.style.display = "initial";
